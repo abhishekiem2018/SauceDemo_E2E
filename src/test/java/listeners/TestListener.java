@@ -16,8 +16,9 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult result) {
-
-        test = extent.createTest(result.getMethod().getMethodName());
+        String testName = result.getMethod().getMethodName();
+        System.out.println("========== Executing Test Case: " + testName + " ==========");
+        test = extent.createTest(testName);
     }
 
     @Override

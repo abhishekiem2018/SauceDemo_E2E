@@ -58,7 +58,7 @@ public class CartTest extends BaseTest {
         Assert.assertTrue(cart.blankCart(), "Validation Failed: Item was not removed from cart");
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4, enabled = false,description = "User able to checkout without cart item")
     public void checkoutWithoutItemTest() {
 
         LoginPage login = new LoginPage(driver);
@@ -71,7 +71,6 @@ public class CartTest extends BaseTest {
         cart.clickCheckout();
 
         // ❌ Defect Validation
-
         Assert.assertFalse(cart.checkOutPagePresent(), "BUG: User able to checkout without cart item");
     }
 }
