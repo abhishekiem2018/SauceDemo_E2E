@@ -42,6 +42,17 @@ public class BaseTest {
 
             System.out.println("Logout skipped or failed");
         }
+//         🔥 If TC failed → close driver immediately
+        if (result.getStatus() == ITestResult.FAILURE) {
+
+            System.out.println("Test Failed - Closing Browser");
+
+            if (driver != null) {
+
+                driver.quit();
+                driver = null;
+            }
+        }
     }
 
     @AfterSuite
