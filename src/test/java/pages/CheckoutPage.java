@@ -10,17 +10,17 @@ public class CheckoutPage extends BasePage {
         super(driver);
     }
 
-    By firstName = By.xpath("//input[@id='first-name']");
-    By lastName = By.xpath("//input[@id='last-name']");
-    By zip = By.xpath("//input[@id='postal-code']");
-    By continueBtn = By.xpath("//input[@id='continue']");
-    By finishBtn = By.xpath("//button[@id='finish']");
-    By orderComplete = By.xpath("//h2[@class='complete-header']");
-    By backToHomeBtn = By.xpath("//button[@id='back-to-products']");
-    By errorMsg = By.xpath("//button[@class='error-button']//parent::h3");
+    private final By firstName = By.xpath("//input[@id='first-name']");
+    private final By lastName = By.xpath("//input[@id='last-name']");
+    private final By zip = By.xpath("//input[@id='postal-code']");
+    private final By continueBtn = By.xpath("//input[@id='continue']");
+    private final By finishBtn = By.xpath("//button[@id='finish']");
+    private final By orderComplete = By.xpath("//h2[@class='complete-header']");
+    private final By backToHomeBtn = By.xpath("//button[@id='back-to-products']");
+    private final By errorMsg = By.xpath("//button[@class='error-button']//parent::h3");
 
     public void enterDetails(String f, String l, String z) {
-        type(firstName, f);   // ✅ BasePage method
+        type(firstName, f);
         type(lastName, l);
         type(zip, z);
     }

@@ -10,10 +10,10 @@ public class LoginPage extends BasePage {
         super(driver);
     }
 
-    By username = By.xpath("//input[@id='user-name']");
-    By password = By.xpath("//input[@id='password']");
-    By loginBtn = By.xpath("//input[@id='login-button']");
-    By errorMessage = By.xpath("//button[@class='error-button']//parent::h3");
+    private final By username = By.xpath("//input[@id='user-name']");
+    private final By password = By.xpath("//input[@id='password']");
+    private final By loginBtn = By.xpath("//input[@id='login-button']");
+    private final By errorMessage = By.xpath("//button[@class='error-button']//parent::h3");
 
     public void login(String user, String pass) {
         type(username, user);      // ✅ from BasePage

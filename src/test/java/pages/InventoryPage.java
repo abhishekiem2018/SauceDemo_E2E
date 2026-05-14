@@ -16,13 +16,13 @@ public class InventoryPage extends BasePage {
         super(driver);
     }
 
-    By addToCartBtn = By.xpath("//button[text()='Add to cart']");
-    By cartIcon = By.xpath("//a[@class='shopping_cart_link']");
-    By filterDropdown = By.xpath("//select[@class='product_sort_container']");
-    By productsName = By.xpath("//div[@class='inventory_item_name ']");
-    By productPrice = By.xpath("//div[@class='inventory_item_price']");
-    By removeBtn = By.xpath("//button[text()='Remove']");
-    By cartBadge = By.xpath("//span[@class='shopping_cart_badge']");
+    private final By addToCartBtn = By.xpath("//button[text()='Add to cart']");
+    private final By cartIcon = By.xpath("//a[@class='shopping_cart_link']");
+    private final By filterDropdown = By.xpath("//select[@class='product_sort_container']");
+    private final By productsName = By.xpath("//div[@class='inventory_item_name ']");
+    private final By productPrice = By.xpath("//div[@class='inventory_item_price']");
+    private final By removeBtn = By.xpath("//button[text()='Remove']");
+    private final By cartBadge = By.xpath("//span[@class='shopping_cart_badge']");
 
 
     public void addItemToCart() {

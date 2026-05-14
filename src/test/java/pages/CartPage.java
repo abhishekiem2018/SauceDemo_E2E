@@ -10,10 +10,10 @@ public class CartPage extends BasePage {
         super(driver);
     }
 
-    By checkoutBtn = By.xpath("//button[@id='checkout']");
-    By removeBtn = By.xpath("//button[contains(@id,'remove-sauce-labs')]");
-    By cartItem = By.xpath(("//div[@class='cart_quantity']"));
-    By checkOutPage = By.xpath("//span[text()='Checkout: Your Information']");
+    private final By checkoutBtn = By.xpath("//button[@id='checkout']");
+    private final By removeBtn = By.xpath("//button[contains(@id,'remove-sauce-labs')]");
+    private final By cartItem = By.xpath(("//div[@class='cart_quantity']"));
+    private final By checkOutPage = By.xpath("//span[text()='Checkout: Your Information']");
 
     public void clickCheckout() {
         click(checkoutBtn);  // ✅ using BasePage method (with highlight)

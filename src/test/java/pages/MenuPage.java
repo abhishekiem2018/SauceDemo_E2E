@@ -10,9 +10,9 @@ public class MenuPage extends BasePage {
         super(driver);
     }
 
-    By menuBtn = By.xpath("//button[@id='react-burger-menu-btn']");
-    By logoutBtn = By.xpath("//a[@id='logout_sidebar_link']");
-    By loginBtn = By.id("login-button");
+    private final By menuBtn = By.xpath("//button[@id='react-burger-menu-btn']");
+    private final By logoutBtn = By.xpath("//a[@id='logout_sidebar_link']");
+    private final By loginBtn = By.id("login-button");
 
     public void logout() {
 

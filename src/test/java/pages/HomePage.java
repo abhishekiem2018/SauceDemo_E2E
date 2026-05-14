@@ -11,9 +11,9 @@ public class HomePage extends BasePage {
         super(driver);
     }
 
-    By facebookIcon = By.xpath("//a[text()='Facebook']");
-    By twitterIcon = By.xpath("//a[text()='Twitter']");
-    By linkedinIcon = By.xpath("//a[text()='LinkedIn']");
+    private final By facebookIcon = By.xpath("//a[text()='Facebook']");
+    private final By twitterIcon = By.xpath("//a[text()='Twitter']");
+    private final By linkedinIcon = By.xpath("//a[text()='LinkedIn']");
 
     public void verifySocialMediaLink (String site, String expectedUrlPart) {
         if(site.equalsIgnoreCase("facebook")){
